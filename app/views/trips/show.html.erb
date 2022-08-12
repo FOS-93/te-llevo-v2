@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row justify-content-center m-5">
+    <div class="col-md-6 card">
+      <div class="card-body">
+        <h3 class="card-title">Desde: <%= @trip.start_point %></h3>
+        <h3 class="card-title">Hacia: <%= @trip.end_point %></h3>
+        <ul class="style-list">
+          <li>Pasajeros: <%= '<i class="fas fa-user" style="color: #36AE7C; margin-right: 4px;" ></i>'.html_safe * (@trip.capacity - @trip.passengers_count) %> <%= '<i class="fas fa-user" style="color: #EB5353; margin-right: 4px;" ></i>'.html_safe * @trip.passengers_count %> </li>
+          <li>Partida: <%= time_tag(@trip.departure_time) %></li>
+        </ul>
+        <h5>Conductor: <small><%= @trip.user.name %> <%= @trip.user.last_name %></small> </h5>
+        <div class="text-center mt-4">
+          <% if policy(@trip).edit? %>
+            <%= link_to 'Edit', edit_trip_path, class: "btn btn-secondary"%>
+          <% end %>
+          <% if policy(@trip).destroy? %>
+            <%= link_to 'Destroy', @trip, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-secondary" %>
+          <% end %>
+          <% if !policy(@trip).edit? %>
+            <%= link_to 'Book', new_trip_booking_path(@trip), class: "btn btn-secondary"%>
+          <% end %>
+          <%= link_to 'Back', trips_path, class:"btn btn-secondary"%>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

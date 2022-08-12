@@ -1,0 +1,20 @@
+<%= simple_form_for(@trip) do |f| %>
+  <ul>
+    <% if @trip.errors.any?%>
+      <% @trip.errors.full_messages.each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    <% end %>
+  </ul>
+
+  <div class="form-inputs">
+    <%= f.input :start_point, required: true %>
+    <%= f.input :end_point, required: true %>
+    <%= f.input :departure_time %>
+    <%= f.input :capacity %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, class:"btn btn-success" %>
+  </div>
+<% end %>
