@@ -1,0 +1,130 @@
+.tripCard {
+  border-radius: 16px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 10px;
+}
+
+.tripCard-mainContainer {
+  height: 100%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tripCard-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tripCard-itinerary{
+  min-width: 0px;
+  position: relative;
+  left: -24px;
+}
+
+.tripCard-price {
+  display: block;
+  flex-shrink: 0;
+  padding-top: 8px;
+  max-width: 80px;
+  white-space: nowrap;
+  text-align: left;
+
+  span {
+    font-weight: 500;
+    color: rgb(5, 71, 82);
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+
+.tripCard-driver {
+  padding-top: 8px;
+  padding-bottom: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tripCard-driver-leftWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.tripCard-driver-rightWrapper {
+  display: inline-flex;
+  align-items: center;
+}
+
+.tripCard-avatar {
+  border-radius: 50%;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 16px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.inicio {
+  padding-left: 24px;
+  padding-right: 24px;
+  display: flex;
+}
+
+.destino {
+  padding-left: 24px;
+  padding-right: 24px;
+  display: flex;
+}
+
+.palito {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 8px;
+  width: 8px;
+  flex-shrink: 0;
+}
+
+.palito-spacio {
+  width: 4px;
+  height: calc(12px);
+  background: transparent;
+}
+
+.palito-pelota {
+  position: absolute;
+  top: 7px;
+}
+
+.palito-pelota-interna {
+  box-sizing: border-box;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(5, 71, 82);
+  border-radius: 50%;
+}
+
+.palito-bajo {
+  flex: 1 1 0%;
+  width: 4px;
+  height: calc(13px);
+  background: rgb(5, 71, 82);
+}
+
+.inicio-info {
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.tripCard-driver-info {
+  display: flex;
+  flex-direction: column;
+}
