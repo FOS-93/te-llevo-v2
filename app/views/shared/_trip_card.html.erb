@@ -1,0 +1,69 @@
+<div class="tripCard">
+  <div class="tripCard-mainContainer">
+    <%# info itinerario %>
+    <div class="tripCard-main">
+      <%# destinos %>
+      <div class="tripCard-itinerary">
+        <%# fecha %>
+        <div style="margin-left: 30px">
+          <span><%= trip.departure_time.strftime('%A %e, %B - %H:%M') %></span>
+        </div>
+        <%# partida %>
+        <div class="inicio">
+          <div class="palito">
+            <div class="palito-spacio"></div>
+            <div class="palito-pelota">
+              <div class="palito-pelota-interna"></div>
+            </div>
+            <div class="palito-bajo"></div>
+          </div>
+          <div class="inicio-info">
+            <span><strong>🚙 </strong><%= trip.start_point %></span>
+            <span><%= '<i class="fas fa-user" style="color: #36AE7C; margin-right: 4px;" ></i>'.html_safe * (trip.capacity - trip.passengers_count) %> <%= '<i class="fas fa-user" style="color: #EB5353; margin-right: 4px;" ></i>'.html_safe * trip.passengers_count %></span>
+          </div>
+        </div>
+        <%# llegada %>
+        <div class="destino">
+          <div class="palito">
+            <div class="palito-pelota">
+              <div class="palito-pelota-interna"></div>
+            </div>
+            <div class="palito-bajo"></div>
+            <div class="palito-spacio"></div>
+          </div>
+          <div>
+            <span><strong>🏁 </strong><%= trip.end_point %></span>
+          </div>
+        </div>
+      </div>
+      <%# precio %>
+      <div class="tripCard-price">
+        <span>$6.000</span>
+      </div>
+    </div>
+    <%# info drive %>
+    <div class="tripCard-driver">
+      <%# izquierda %>
+      <div class="tripCard-driver-leftWrapper">
+        <%# foto %>
+        <span>
+          <div>
+            <img src="https://d2kwny77wxvuie.cloudfront.net/user/DMbf7B2kRhiyhQhdNfq97Q/thumbnail_144x144.jpeg" alt="Fabrizio Oyarce" class="tripCard-avatar">
+          </div>
+        </span>
+        <%# nombre %>
+        <div class="tripCard-driver-info">
+          <span><%= trip.user.full_name %></span>
+          ⭐⭐⭐
+        </div>
+      </div>
+      <%# derecha %>
+      <div class="tripCard-driver-rightWrapper">
+        <ul>
+          <li title="Aceptación automática"><img src="https://cdn.blablacar.com/search/images/spa/filters/automatic_approval.svg" height="24" width="24"></li>
+          <li title="Máx. 2 personas atrás"><img src="https://cdn.blablacar.com/search/images/spa/filters/two_max_in_the_back.svg" height="24" width="24"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
